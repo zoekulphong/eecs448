@@ -1,0 +1,36 @@
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.slide {
+  display: none;
+}
+.photo {
+  height: 600px;
+  width: 1000px;
+  object-fit: cover;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  color: black;
+  font-weight: bold 4rem Arial;
+}
+.next {
+  right: -3rem;
+}
+.prev {
+  left: -3rem;
+}
+
+.text {
+  color: white;
+  font: 2rem Arial;
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  text-align: center;
+}

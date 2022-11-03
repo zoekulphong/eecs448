@@ -1,0 +1,70 @@
+
+<!doctype html>
+<html class="html" lang="en">
+
+  <head>
+    <title>Slideshow</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+
+  <body>
+
+    <div class="slideshow-container">
+      <div class="slide">
+        <img src="img1.jpg" class="photo">
+        <div class="text">1 / 5</div>
+      </div>
+    
+      <div class="slide">
+        <img src="img2.jpg" class="photo">
+        <div class="text">2 / 5</div>
+      </div>
+    
+      <div class="slide">
+        <img src="img3.jpg" class="photo">
+        <div class="text">3 / 5</div>
+      </div>
+
+      <div class="slide">
+        <img src="img4.jpg" class="photo">
+        <div class="text">4 / 5</div>
+      </div>
+
+      <div class="slide">
+        <img src="img5.jpg" class="photo">
+        <div class="text">5 / 5</div>
+      </div>
+    
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    
+    <script type="text/javascript">
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slide");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slides[slideIndex-1].style.display = "block";  
+      }
+    </script>
+
+  </body>
+
+</html>

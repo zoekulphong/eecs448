@@ -1,0 +1,47 @@
+
+<!doctype html>
+<html class="html" lang="en">
+
+  <head>
+    <title>Password Validator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+    <div>
+      <input id="pass"
+        type="password"
+        name="pass"
+        placeholder="Enter Password"
+        required>
+      <br/>
+      <input id="confirm_pass"
+        type="password"
+        name="confirm_pass"
+        placeholder="Confirm Password"
+        required>
+    </div>
+    <span id="wrong_pass_alert"></span>
+    <div>
+      <button id="create"
+        onclick="pass_alert()">
+        Validate
+      </button>
+    </div>
+    <script type="text/javascript">
+      function pass_alert() {
+        if (document.getElementById('pass').value.length < 8 || document.getElementById('confirm_pass').value.length < 8) {
+          alert("Passwords must be at least 8 characters long");
+        } else if (document.getElementById('pass').value == "" || document.getElementById('confirm_pass').value == "") {
+          alert("Please fill all the fields");
+        } else if (document.getElementById('pass').value != document.getElementById('confirm_pass').value) {
+          alert("Passwords must match");
+        } else {
+          alert("Your password has been submitted");
+        }
+      }
+    </script>
+  </body>
+
+</html>

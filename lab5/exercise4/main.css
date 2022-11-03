@@ -1,0 +1,36 @@
+:root {
+  --bg-color: white;
+  --border-color: white;
+  --border-width:  0;
+}
+
+p {
+  font: 1.5rem Arial;
+}
+
+button {
+  font: 1rem Arial;
+  background-color: pink;
+  border-width: 0;
+}
+
+.container {
+  display: flex;
+  max-width: 40rem;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.question {
+  min-width: 30rem;
+  font: 1rem Arial;
+}
+
+.background {
+  background-color: var(--bg-color);
+  border-color: var(--border-color);
+  border-style: solid;
+  border-width: var(--border-width);
+}
