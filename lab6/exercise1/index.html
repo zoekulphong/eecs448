@@ -1,0 +1,40 @@
+<!doctype html>
+<html class="html" lang="en">
+
+  <head>
+    <title>Multiplication Table</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+      body {
+        font:10px Arial;
+      }
+      td.gray {
+        background-color: #ccc;
+      }
+      td.white {
+        background-color: #fff;
+      }
+      td a {
+        display: block;
+        text-decoration: none;
+      }
+      </style>
+  </head>
+
+  <body>
+    <table border="1">
+    <?php 
+    for ($r = 1; $r < 101; $r++) {
+      echo "<tr>";
+        for ($c=1; $c<101; $c++) {
+        ($c == $r) ? $bg = "gray" : $bg = "white";
+        echo "<td class='$bg'><a href='#' title='$r x $c = ". $r * $c . " ' >" . $r*$c . "</a></td>" ;
+        }		
+      echo  "</tr>";
+    }        
+    ?>
+    </table>
+
+  </body>
+</html>

@@ -1,0 +1,103 @@
+
+<!doctype html>
+<html class="html" lang="en">
+
+  <head>
+    <title>Web Store</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+  </head>
+
+  <style>
+    <?php include './style.css'; ?>
+  </style>
+
+  <body>
+    <div class="container">
+      <script src="formChecker.js"></script>
+      <h1>Welcome to the Store!</h1>
+      <form name="store" action="customerBackend.php" onsubmit="validateForm()" method="post">
+        <ul style="list-style: none">
+          <li>
+            <div>
+              <h3>Email</h3>
+              <input id="email"
+                type="email"
+                name="email"
+                placeholder="Enter Email"
+                required>
+              <br/>
+              <h3>Password</h3>
+              <input id="pass"
+                type="text"
+                name="pass"
+                placeholder="Enter Password"
+                required>
+            </div>
+          </li>
+          <br>
+          <br>
+          <li>
+            <h3 name="item-1">Desk - $50.00</h3>
+            <input id="item-1"
+              type="number"
+              name="item-1"
+              class="question"
+              placeholder="Quantity"
+              required>
+          </li>
+          <li>
+            <h3 name="item-2">Chair - $20.00</h3>
+            <input id="item-2"
+              type="number"
+              name="item-2"
+              class="question"
+              placeholder="Quantity"
+              required>
+          </li>
+          <li>
+            <h3 name="item-3">Bookshelf - $75.00</h3>
+            <input id="item-3"
+              type="number"
+              name="item-3"
+              class="question"
+              placeholder="Quantity"
+              required>
+          </li>
+          <br>
+          <br>
+          <li>
+            <h3 name="shipping">Choose a shipping option</h3>
+            <div>
+              <label for="shipping-a">
+                <input type="radio" name="shipping-choice" id="shipping-a" value="Free 7-day" required/>
+                Free 7-day
+              </label>
+            </div>
+            <div>
+              <label for="shipping-b">  
+                <input type="radio" name="shipping-choice" id="shipping-b" value="$50.00 overnight" required/>
+                $50.00 overnight
+              </label>
+            </div>
+            <div>
+              <label for="shipping-c">
+                <input type="radio" name="shipping-choice" id="shipping-c" value="$5.00 3-day" required/>
+                $5.00 3-day
+              </label>
+            </div>
+          </li>   
+        </ul>   
+        <br>
+        <br>
+        <input type="reset" value="Reset" class="button"/> 
+        <input type="submit" value="Submit" class="button"/> 
+      </form>
+
+      <p id="alert"></p>
+    </div>
+
+  </body>
+
+</html>
